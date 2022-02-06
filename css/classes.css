@@ -1,0 +1,43 @@
+#blobContainer {
+    position: absolute;
+    top: 200px;
+    left: 200px;
+
+    z-index: -1;
+}
+
+.p-home-intro {
+    width: 22vw;
+    margin: auto;
+}
+
+.bouncy-nav-link {
+    margin-left: 50px;
+    transition: transform 100ms cubic-bezier(0.18, 0.89, 0.32, 1.28);;
+    position: relative;
+}
+
+.bouncy-nav-link::before {
+    display: none;
+    content: url("../imgs/miscellaneous imgs/right-arrow.svg"); /* ! TODO: Replace placeholder arrow with final "blobby" asset*/
+    position: absolute;
+    top: 55%;
+    transform: translateY(-45%);
+    left: -40px;
+    right: 0;
+    width: 40px;
+    transition: transform 100ms cubic-bezier(0.18, 0.89, 0.32, 1.28);;
+}
+
+.bouncy-nav-link:hover {
+    transform: translate(21px);
+}
+
+.bouncy-nav-link:hover::before {
+    display: inline-block;
+}
+
+.avatar-img {
+    min-height: 10vh;
+    max-height: 100vh;
+}
