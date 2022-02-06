@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0">                              <!-- ! TODO: Optimize page for mobile and other resolutions -->
+    <title>Reyas | Front End Portfolio</title>
+    <meta name="description" content="Hey, I'm Reyas, an aspiring Front End Developer and this is my portfolio.">
+
+    <link rel="canonical" href="reyashey.github.io/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:500,700&display=swap" rel="stylesheet">     <!-- ! Select only the weight used -->
+
+    <link rel="preload" href="./css/globals.css" as="style" onload="this.onload=null; this.rel='stylesheet'">
+    <link rel="preload" href="./css/grids.css" as="style" onload="this.onload=null; this.rel='stylesheet'">
+    <link rel="preload" href="./css/classes.css" as="style" onload="this.onload=null; this.rel='stylesheet'">
+    <link rel="preload" href="./css/animations.css" as="style" onload="this.onload=null; this.rel='stylesheet'">
+
+    <noscript><link rel="stylesheet" href="./css/globals.css"></noscript>
+    <noscript><link rel="stylesheet" href="./css/grids.css"></noscript>
+    <noscript><link rel="stylesheet" href="./css/classes.css"></noscript>
+    <noscript><link rel="stylesheet" href="./css/animations.css"></noscript>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/kute.js/2.2.2/kute.min.js" defer></script>
+    <script src="./js/blob%20animation.js" defer></script>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Morphing blob 1 // In the future this might use CSS morphing instead of JS -->
+    <!-- ! TODO: Put all the svgs in an external file -->
+    <!-- ! TODO: decide if this goes inside a grid/flexbox with z-index: -1 -->
+    <svg id="blobContainer" onload="animateBlob()" viewBox="0 0 960 540" width="300" height="300" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+        <!-- First blob -->
+        <g transform="translate(489.154691105288 277.97627775424405)">
+            <path id="blob1" d="M165.3 -143.1C198.2 -90.6 197.8 -22.7 184 43.6C170.1 109.9 142.8 174.8 93.6 200.9C44.5 227 -26.3 214.4 -85.4 183.6C-144.4 152.7 -191.6 103.6 -206.2 45.5C-220.7 -12.7 -202.6 -79.9 -162.8 -134C-123 -188.1 -61.5 -229 2.3 -230.9C66.2 -232.8 132.4 -195.6 165.3 -143.1" fill="#f74519"></path>
+        </g>
+        <!-- Second blob -->
+        <g style="visibility: hidden;" transform="translate(467.40558834885564 254.52306979378136)">
+            <path id="blob2" d="M165.8 -121C209.7 -77.2 236.5 -8.6 225.2 55.7C214 119.9 164.7 179.8 104.9 202.8C45.1 225.8 -25.2 212 -82.3 180.7C-139.4 149.4 -183.3 100.6 -197.4 43.6C-211.6 -13.4 -196.1 -78.7 -158.3 -121.1C-120.4 -163.5 -60.2 -183 0.4 -183.3C61 -183.6 122 -164.8 165.8 -121" fill="#f74519"></path>
+        </g>
+        <!-- Third blob -->
+        <g style="visibility: hidden;" transform="translate(483.783542466973 251.2965866821618)">
+            <path id="blob3" d="M175 -138.2C209.3 -96.6 207.5 -24.8 190.9 41.8C174.3 108.5 142.9 170 90 200.9C37 231.8 -37.5 232.1 -96.2 202.7C-154.9 173.3 -197.9 114.1 -207.7 52.6C-217.6 -8.9 -194.4 -72.7 -154.3 -115.6C-114.1 -158.5 -57.1 -180.5 6.6 -185.8C70.4 -191.1 140.7 -179.7 175 -138.2" fill="#f74519"></path>
+        </g>
+    </svg>
+
+    <!-- Home/Landing Page -->
+    <main class="home-grid-wrapper">
+        <header class="header-avatar-grid">
+            <!-- Inline css for quickest render and least Layout Shift -->
+            <img
+                width="489.094px"
+                height="929px"
+                src="./imgs/miscellaneous%20imgs/Reyas-avatar.png"
+
+                alt="Reyas' avatar in the background"
+            />
+
+            <!-- srcset="puppy-1000.jpg 1000w, puppy-2000.jpg 2000w, puppy-3000.jpg 3000w" -->
+
+        </header>
+        <nav class="nav-links-grid">
+            <a href="#" class="bouncy-nav-link">Home</a>
+            <br>
+            <a href="#" class="bouncy-nav-link">Projects</a>
+            <br>
+            <a href="#" class="bouncy-nav-link">Contact</a>
+        </nav>
+        <article class="home-intro-grid">
+            <h1 style="line-height: 0.2;">Reyas</h1>
+            <h1>Hey,</h1>
+            <p class="p-home-intro">i'm an italy based front-end web developer, with an strong interest on details and performance</p>
+        </article>
+    </main>
+
+    <!-- test "Projects" -->
+    <!-- ! TODO: only use 1 <main> that doesnt have its visibility set to hidden -->
+<!--
+    <main style="height:400px;background-color: grey;">
+        <header>
+            <h2 style="text-align: center; color: black; background-color: white;height: 200px;">Projects</h2>
+            <a href="">test link</a>
+        </header>
+    </main>
+-->
+</body>
+</html>
