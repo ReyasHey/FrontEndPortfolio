@@ -23,16 +23,17 @@
     <noscript><link rel="stylesheet" href="./css/classes.css"></noscript>
     <noscript><link rel="stylesheet" href="./css/animations.css"></noscript>
 
+    <script src="./js/scroll%20resize.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/kute.js/2.2.2/kute.min.js" defer></script>
     <script src="./js/blob%20animation.js" defer></script>
 
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <!-- Morphing blob 1 // In the future this might use CSS morphing instead of JS -->
+    <!-- Morphing blob 1 in the background -->
     <!-- ! TODO: Put all the svgs in an external file -->
-    <!-- ! TODO: decide if this goes inside a grid/flexbox with z-index: -1 -->
-    <svg id="blobContainer" onload="animateBlob()" viewBox="0 0 960 540" width="300" height="300" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+    <!-- ! TODO: Decide if this goes inside a grid/flexbox with z-index: -1 -->
+    <svg id="blobContainer" onload="animateBlob()" role="img" viewBox="0 0 960 540" width="300" height="300" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
         <!-- First blob -->
         <g transform="translate(489.154691105288 277.97627775424405)">
             <path id="blob1" d="M165.3 -143.1C198.2 -90.6 197.8 -22.7 184 43.6C170.1 109.9 142.8 174.8 93.6 200.9C44.5 227 -26.3 214.4 -85.4 183.6C-144.4 152.7 -191.6 103.6 -206.2 45.5C-220.7 -12.7 -202.6 -79.9 -162.8 -134C-123 -188.1 -61.5 -229 2.3 -230.9C66.2 -232.8 132.4 -195.6 165.3 -143.1" fill="#f74519"></path>
@@ -47,44 +48,78 @@
         </g>
     </svg>
 
-    <!-- Home/Landing Page -->
-    <main class="home-grid-wrapper">
-        <header class="header-avatar-grid">
-            <!-- Inline css for quickest render and least Layout Shift -->
-            <img
-                width="489.094px"
-                height="929px"
-                src="./imgs/miscellaneous%20imgs/Reyas-avatar.png"
-
-                alt="Reyas' avatar in the background"
-            />
-
-            <!-- srcset="puppy-1000.jpg 1000w, puppy-2000.jpg 2000w, puppy-3000.jpg 3000w" -->
-
-        </header>
-        <nav class="nav-links-grid">
-            <a href="#" class="bouncy-nav-link">Home</a>
-            <br>
-            <a href="#" class="bouncy-nav-link">Projects</a>
-            <br>
-            <a href="#" class="bouncy-nav-link">Contact</a>
+    <header class="sticky-nav-grid-wrapper">
+        <h1 class="sticky-nav-header">ReyasHey</h1>
+        <nav class="sticky-nav-links-wrapper">
+            <div class="sticky-link-wrapper">
+                <a href="#Home">
+                    <svg version="1.1" id="visual" role='button' width=35 height=35 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 125.3 139.3" style="enable-background:new 0 0 125.3 139.3;" xml:space="preserve">
+                        <title>Home navigation button</title>
+                        <desc>Scrolls to the Home section of the website</desc>
+                        <g transform="translate(489.154691105288 277.97627775424405)">
+                            <path style="fill:#f74519;" d="M-371.5-250.5c10.3,16.4,10.2,37.6,5.8,58.3c-4.3,20.7-12.9,41-28.2,49.2c-15.3,8.2-37.5,4.2-55.9-5.4c-18.4-9.7-33.2-25-37.8-43.2c-4.5-18.2,1.1-39.2,13.6-56.1s31.7-29.7,51.6-30.3C-402.5-278.6-381.8-266.9-371.5-250.5"/>
+                        </g>
+                    </svg>
+                </a>
+                <a href="#Home" class="bouncy-nav-link">&nbsp;Home</a>                      <!-- ! TODO: Push more to the left as to not have a gap between text and image + add +1 space aat the start of space-->
+            </div>
+            <div class="sticky-link-wrapper">
+                <a href="#Home">
+                    <svg version="1.1" id="visual" role='button' width=35 height=35 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 125.3 139.3" style="enable-background:new 0 0 125.3 139.3;" xml:space="preserve">
+                        <desc>Scrolls to the Projects section of the website</desc>         <!-- ! TODO: Change to final section name -->
+                        <title>Projects navigation button</title>                           <!-- ! TODO: Change to final section name -->
+                        <g transform="translate(489.154691105288 277.97627775424405)">
+                            <path style="fill:#f74519;" d="M-371.5-250.5c10.3,16.4,10.2,37.6,5.8,58.3c-4.3,20.7-12.9,41-28.2,49.2c-15.3,8.2-37.5,4.2-55.9-5.4c-18.4-9.7-33.2-25-37.8-43.2c-4.5-18.2,1.1-39.2,13.6-56.1s31.7-29.7,51.6-30.3C-402.5-278.6-381.8-266.9-371.5-250.5"/>
+                        </g>
+                    </svg>
+                </a>
+                <a href="#Home" class="bouncy-nav-link">&nbsp;Projects</a>
+            </div>
+            <div class="sticky-link-wrapper">
+                <a href="#Home">
+                    <svg version="1.1" id="visual" role='button' width=35 height=35 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 125.3 139.3" style="enable-background:new 0 0 125.3 139.3;" xml:space="preserve">
+                        <title>Contacts navigation button</title>                           <!-- ! TODO:  Change to final section name -->
+                        <desc>Scrolls to the Contacts section of the website</desc>         <!-- ! TODO:  Change to final section name -->
+                        <g transform="translate(489.154691105288 277.97627775424405)">
+                            <path style="fill:#f74519;" d="M-371.5-250.5c10.3,16.4,10.2,37.6,5.8,58.3c-4.3,20.7-12.9,41-28.2,49.2c-15.3,8.2-37.5,4.2-55.9-5.4c-18.4-9.7-33.2-25-37.8-43.2c-4.5-18.2,1.1-39.2,13.6-56.1s31.7-29.7,51.6-30.3C-402.5-278.6-381.8-266.9-371.5-250.5"/>
+                        </g>
+                    </svg>
+                </a>
+                <a href="#Home" class="bouncy-nav-link">&nbsp;Contact</a>
+            </div>
         </nav>
-        <article class="home-intro-grid">
-            <h1 style="line-height: 0.2;">Reyas</h1>
-            <h1>Hey,</h1>
-            <p class="p-home-intro">i'm an italy based front-end web developer, with an strong interest on details and performance</p>
+    </header>
+
+    <main style="max-width: 100%; max-height: 100%;">
+        <!-- Home/Landing Page -->
+        <article id="Home" class="home-grid-wrapper">
+                <header class="home-h-grid">
+                    <h2>Reyas<br><br><br><br><br>Hey,</h2>
+                </header>
+                <p class="home-p-grid p-home-intro">i'm an italy based front-end web developer, with an strong interest in details and performance</p>
+                <!-- Avatar w/ inline css for quickest render and least Layout Shift -->
+                <img
+                    width="489.094px"
+                    height="929px"
+
+                    class="home-avatar-grid"
+
+                    src="./imgs/miscellaneous%20imgs/Reyas-avatar.png"
+                    alt="Reyas' avatar"
+                />
+                <!-- ? Render low res img behind this as a preview while this one loads -->
+                <!-- ? Is this pixels or "w"? -->
+                <!-- srcset="avatar-1000.jpg 1000w, avatar-2000.jpg 2000w, avatar-3000.jpg 3000w" -->
         </article>
+
+        <!-- Projects -->
+        <!-- <article style="height:400px;background-color: grey;">
+            <header>
+                <h2 style="text-align: center; color: black; background-color: white;height: 200px;">Projects</h2>
+                <a href="#">test link</a>
+            </header>
+        </article> -->
     </main>
 
-    <!-- test "Projects" -->
-    <!-- ! TODO: only use 1 <main> that doesnt have its visibility set to hidden -->
-<!--
-    <main style="height:400px;background-color: grey;">
-        <header>
-            <h2 style="text-align: center; color: black; background-color: white;height: 200px;">Projects</h2>
-            <a href="">test link</a>
-        </header>
-    </main>
--->
 </body>
 </html>

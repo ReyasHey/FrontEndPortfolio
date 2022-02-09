@@ -1,31 +1,68 @@
-/* Home/First Section's Grid */
-.home-grid-wrapper{
+/* Sticky Navigation/Header */
+.sticky-nav-grid-wrapper {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+
+    height: 100%;
+    max-width: max-content;
+    padding-left: 10%;
+
+    position: fixed;
+    top: 0;
+    z-index: 3;
+}
+
+.sticky-nav-header {
+    display: none; /* ! TODO: Make hidden outside of 'Home' section of site */
+    grid-row: 1;
+    font-size: 25px;
+}
+
+.sticky-nav-links-wrapper {
+    grid-row: 5;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.sticky-link-wrapper {
+    display: flex;
+}
+
+/* Home/Site's First Section Grid */
+.home-grid-wrapper {
+    display: grid;
+    grid-template-columns: 10vw repeat(4, 1fr) 10vw;
     grid-auto-rows: auto;
-    max-height: clamp(1080px, 100vh, 2000px);
+    /* max-height: clamp(1080px, 100vh, 2000px); */
+    background-image: url("../imgs/bgs/bg.png");
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh; /* ! TODO: Make this ~95vh so to start the next page within this viewport as to chain content together */
+
+    padding: 0 10% 0 10%;
 }
 
-.home-grid-wrapper img {
-    text-align: left;
-/*! max-height: clamp(1px, 0, 2px);  TODO: fix this, it's just not working as of now */
+.home-grid-wrapper > * {
+    z-index: 2;
 }
 
-.nav-links-grid {
-    grid-column: 1;
-    grid-row: 2/4;
-    align-self: center;
+.home-h-grid {
+    grid-column: 3;
+    grid-row: 2/3;
 }
 
-.home-intro-grid {
-    grid-column: 2/4;
-    grid-row: 2/4;
+.home-p-grid {
+    grid-column: 3;
+    grid-row: 3;
 }
 
-.header-avatar-grid {
-    grid-column: 4;
+.home-avatar-grid {
+    grid-column: 5;
     grid-row: 1/6;
     align-self: end;
     /* ! TODO: Make this image responsive */
     /* ? IDEA: clamp could solve grid resizing issues? */
+    /*! max-height: clamp(1px, 0, 2px);  TODO: fix this, it's just not working as of now */
 }

@@ -1,40 +1,37 @@
+.svg-button{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
 #blobContainer {
     position: absolute;
-    top: 200px;
-    left: 200px;
+    top: 650px;
+    left: 300px;
 
-    z-index: -1;
+    z-index: 1;
 }
 
 .p-home-intro {
+    min-width: 22vw;
     width: 22vw;
     margin: auto;
+    margin-top: -0.9vw;
 }
+
+/* .sticky-link-wrapper:hover > #navLink1 ~ #navLink2 ~ #navLink3 {
+    transform: scale(2300);
+} */
+/* ! TODO: Transform only the blob inside the nav*/
 
 .bouncy-nav-link {
-    margin-left: 50px;
-    transition: transform 100ms cubic-bezier(0.18, 0.89, 0.32, 1.28);;
+    display: inline-block;
     position: relative;
-}
-
-.bouncy-nav-link::before {
-    display: none;
-    content: url("../imgs/miscellaneous imgs/right-arrow.svg"); /* ! TODO: Replace placeholder arrow with final "blobby" asset*/
-    position: absolute;
-    top: 55%;
-    transform: translateY(-45%);
-    left: -40px;
-    right: 0;
-    width: 40px;
-    transition: transform 100ms cubic-bezier(0.18, 0.89, 0.32, 1.28);;
+    transition: transform 100ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
 
 .bouncy-nav-link:hover {
-    transform: translate(21px);
-}
-
-.bouncy-nav-link:hover::before {
-    display: inline-block;
+    transform: scale(1.25) translate(12.5%);
 }
 
 .avatar-img {
