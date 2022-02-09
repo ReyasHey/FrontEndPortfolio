@@ -10,3 +10,12 @@
     animation-direction: normal;
     animation-timing-function: linear;
 }
+
+
+/* !
+? fill:url(#pattern);
+? https://stackoverflow.com/questions/14051351/svg-gradient-using-css?answertab=votes
+? "Answer 2019"
+
+? https://css-tricks.com/how-to-do-knockout-text/
+! */
