@@ -6,7 +6,8 @@ body {
 
     margin: 0;
 
-    font-family: 'Poppins', sans-serif;
+    font-display: swap;
+    font-family: 'Poppins', 'Verdana', sans-serif;
     line-height: normal;
     color: rgb(245, 245, 245);
 }
@@ -23,8 +24,15 @@ h2 {
     line-height: 1.85rem;
 }
 
+h3 {
+    font-size: 4rem;
+    text-align: center;
+    line-height: 4rem;
+}
+
 p {
     font-size: 1.563rem;
+    text-align: center;
 }
 
 a {

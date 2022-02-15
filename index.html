@@ -59,10 +59,10 @@
                         </g>
                     </svg>
                 </a>
-                <a href="#Home" class="bouncy-nav-link">&nbsp;Home</a>                      <!-- ! TODO: Push more to the left as to not have a gap between text and image + add +1 space aat the start of space-->
+                <a href="#Home" class="bouncy-nav-link">&nbsp;Home</a>                      <!-- ! TODO: Push more to the left as to not have a gap between text and image + add +1 space at the start of space-->
             </div>
             <div class="sticky-link-wrapper">
-                <a href="#Home">
+                <a href="#Projects">
                     <svg version="1.1" id="visual" role='button' width=35 height=35 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 125.3 139.3" style="enable-background:new 0 0 125.3 139.3;" xml:space="preserve">
                         <desc>Scrolls to the Projects section of the website</desc>         <!-- ! TODO: Change to final section name -->
                         <title>Projects navigation button</title>                           <!-- ! TODO: Change to final section name -->
@@ -71,7 +71,7 @@
                         </g>
                     </svg>
                 </a>
-                <a href="#Home" class="bouncy-nav-link">&nbsp;Projects</a>
+                <a href="#Projects" class="bouncy-nav-link">&nbsp;Projects</a>
             </div>
             <div class="sticky-link-wrapper">
                 <a href="#Home">
@@ -88,36 +88,86 @@
         </nav>
     </header>
 
-    <main style="max-width: 100%; max-height: 100%;">
+    <main style="max-width: 100%;">
         <!-- Home/Landing Page -->
         <article id="Home" class="home-grid-wrapper">
-                <header class="home-h-grid">
-                    <h2>Reyas<br><br><br><br><br>Hey,</h2>
-                </header>
-                <p class="home-p-grid p-home-intro">i'm an italy based front-end web developer, with an strong interest in details and performance</p>
-                <!-- Avatar w/ inline css for quickest render and least Layout Shift -->
-                <img
-                    width="489.094px"
-                    height="929px"
+            <header class="home-h-grid">
+                <h2>Reyas<br><br><br><br><br>Hey,</h2>
+            </header>
+            <p class="home-p-grid p-home-intro">i'm an italy based front-end web developer, with an strong interest in details and performance</p>
+            <!-- Avatar w/ inline css for quickest render and least Layout Shift -->
+            <img
+                width="489.094px"
+                height="929px"
 
-                    class="home-avatar-grid"
+                class="home-avatar-grid"
 
-                    src="./imgs/miscellaneous%20imgs/Reyas-avatar.png"
-                    alt="Reyas' avatar"
-                />
-                <!-- ? Render low res img behind this as a preview while this one loads -->
-                <!-- ? Is this pixels or "w"? -->
-                <!-- srcset="avatar-1000.jpg 1000w, avatar-2000.jpg 2000w, avatar-3000.jpg 3000w" -->
+                src="./imgs/miscellaneous%20imgs/Reyas-avatar.png"
+                alt="Reyas' avatar"
+            />
+            <!-- ? Render low res img behind this as a preview while this one loads -->
+            <!-- ? Is this pixels or "w"? -->
+            <!-- srcset="avatar-1000.jpg 1000w, avatar-2000.jpg 2000w, avatar-3000.jpg 3000w" -->
+            <!-- CLamp()? -->
         </article>
 
+        <hr style="height: 10px; background-color: #1b1b1b; border-width: 0; margin: 0px;">
+        <!-- ! TODO: Make the foreground/transition scroll faster than the site in the background -->
+        <!-- ! Like its "scanning the page above" -->
+
         <!-- Projects -->
-        <!-- <article style="height:400px;background-color: grey;">
+        <section id="Projects" class="projects-grid-wrapper" style="background-image: url('./imgs/bgs/bgProjects.png'); height: 200vh; max-width: 100%;">
             <header>
-                <h2 style="text-align: center; color: black; background-color: white;height: 200px;">Projects</h2>
-                <a href="#">test link</a>
+                <h2 class="Projects">Projects</h2>
             </header>
-        </article> -->
+            <!-- Lemons Home Page -->
+            <article id="Lemons" class="Lemons">
+                <header class="LemonsH">
+                    <h3>Lemons Home Page</h3>
+                </header>
+                <div class="LemonsP">
+                    <p>7-day challange after learning CSS grid</p>          <!-- ! TODO: Decide if this is h4 material and ok with Best SEO Practices -->
+                    <p>Desciption lorema ipsadu <br> More Info ></p>
+                </div>
+                <a href="https://reyashey.github.io/Lemons-Landing-Page/" target="_blank" class="LemonsImg">
+                    <img
+                        style="aspect-ratio: auto 1293 / 792;
+                        object-fit: cover;
+                        border-radius: 42px;
+                        height: 500px;"
+                        src="./imgs/miscellaneous%20imgs/Lemons%20Home%20Page.png"
+                        alt="Lemons' Home Page"
+                    />
+                </a>
+                <div class="LemonsLinks">
+                    <a href="https://github.com/ReyasHey/Lemons-Landing-Page" target="_blank">Github Project ></a>
+                    <a href="https://reyashey.github.io/Lemons-Landing-Page/" target="_blank">Website/Deployment ></a>
+                </div>
+            </article>
+            <article id="ComingSoon" class="ComingSoon">
+                <header class="SoonH">
+                    <h3>Coming Soon</h3>
+                </header>
+                <div class="SoonP">
+                    <p>New project coming this month, <a href="https://github.com/ReyasHey" target="_blank">stay tuned!</a></p>
+                    <p>Desciption lorema ipsadu <br> More Info ></p>
+                </div>
+                <a
+                    href="https://github.com/ReyasHey"
+                    target="_blank"
+                    style="aspect-ratio: auto 1293 / 792;
+                    object-fit: cover;
+                    border-radius: 42px;
+                    background: radial-gradient(circle, #3d3d3d 0%, #1b1b1b 100%);
+                    height: 500px;"
+                    class="SoonImg"></a>
+                <a href="https://github.com/ReyasHey" target="_blank" class="SoonLinks">Follow on Github ></a>
+            </article>
+        </section>
     </main>
 
+    <hr style="height: 10px; background-color: #1b1b1b; border-width: 0; margin: 0px;">
+    <!-- ! TODO: Make the foreground/transition scroll faster than the site in the background -->
+    <!-- ! Like its "scanning the page above" -->
 </body>
 </html>
