@@ -13,6 +13,7 @@
 }
 
 .p-home-intro {
+    text-align: left;
     min-width: 22vw;
     width: 22vw;
     margin: auto;

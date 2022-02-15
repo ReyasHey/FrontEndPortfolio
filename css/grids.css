@@ -5,7 +5,7 @@
 
     height: 100%;
     max-width: max-content;
-    padding-left: 10%;
+    margin-left: 5%;
 
     position: fixed;
     top: 0;
@@ -31,6 +31,7 @@
     display: flex;
 }
 
+
 /* Home/Site's First Section Grid */
 .home-grid-wrapper {
     display: grid;
@@ -41,6 +42,7 @@
     background-repeat: no-repeat;
     background-size: 100vw 100vh; /* ! TODO: Make this ~95vh so to start the next page within this viewport as to chain content together */
 
+    /* Making the content closer together while keeping the bg full width*/
     padding: 0 10% 0 10%;
 }
 
@@ -65,4 +67,95 @@
     /* ! TODO: Make this image responsive */
     /* ? IDEA: clamp could solve grid resizing issues? */
     /*! max-height: clamp(1px, 0, 2px);  TODO: fix this, it's just not working as of now */
+}
+
+
+/* Home/Site's First Section Grid */
+.projects-grid-wrapper {
+    display: grid;
+    grid-template-rows: 40vh 70vh 70vh;
+    grid-template-columns: 1fr;
+    max-height: 180vh;
+
+    background-image: url("../imgs/bgs/bgProjects.png");
+    background-repeat: no-repeat;
+    background-size: 100vw 180vh;
+
+    /* Making the content closer together while keeping the bg full width*/
+    padding: 0 10% 0 10%;
+}
+
+/* Header of the grid */
+.Projects {
+    grid-row: 1;
+}
+
+/* 1st Grid */
+.Lemons {
+    grid-row: 2;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+/* Lemons grid elements */
+.LemonsH {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: center;
+    margin-top: -15rem;
+}
+
+.LemonsP {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: center;
+}
+
+.LemonsImg {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.LemonsLinks {
+    grid-column: 2;
+    grid-row: 2;
+
+    text-align: center;
+}
+
+/* 2nd Grid */
+.ComingSoon {
+    grid-row: 3;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+/* ComingSoon grid elements */
+.SoonH {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: center;
+    margin-top: -15rem;
+}
+
+.SoonP {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: center;
+}
+
+.SoonImg {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.SoonLinks {
+    grid-column: 1;
+    grid-row: 2;
+
+    text-align: center;
 }
