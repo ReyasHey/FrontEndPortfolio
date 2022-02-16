@@ -73,13 +73,13 @@
 /* Home/Site's First Section Grid */
 .projects-grid-wrapper {
     display: grid;
-    grid-template-rows: 40vh 70vh 70vh;
+    grid-template-rows: 40vh 75vh 75vh;
     grid-template-columns: 1fr;
-    max-height: 180vh;
+    max-height: 190vh;
 
     background-image: url("../imgs/bgs/bgProjects.png");
     background-repeat: no-repeat;
-    background-size: 100vw 180vh;
+    background-size: 100vw 190vh;
 
     /* Making the content closer together while keeping the bg full width*/
     padding: 0 10% 0 10%;
@@ -111,18 +111,25 @@
     grid-column: 1;
     grid-row: 1;
     align-self: center;
+    padding-top: 5rem;
 }
 
-.LemonsImg {
+.LemonsSite {
     grid-column: 2;
-    grid-row: 1;
-}
-
-.LemonsLinks {
-    grid-column: 2;
-    grid-row: 2;
+    grid-row: 1/2;
 
     text-align: center;
+
+    background-color: #f1e572;
+    padding: 20px;
+    border-radius: 42px;
+}
+
+.LemonsLink {
+    background-color: rgb(98, 216, 75);
+    padding: 7px;
+    margin: 2px 0 2px 0;
+    border-radius: 15px;
 }
 
 /* 2nd Grid */
@@ -148,14 +155,20 @@
     align-self: center;
 }
 
-.SoonImg {
+.SoonSite {
     grid-column: 1;
     grid-row: 1;
-}
-
-.SoonLinks {
-    grid-column: 1;
-    grid-row: 2;
 
     text-align: center;
+
+    background-color: #b4b4b4;
+    padding: 20px;
+    border-radius: 42px;
+}
+
+.SoonLink {
+    background-color: rgb(75, 75, 75);
+    padding: 7px;
+    margin: 2px 0 2px 0;
+    border-radius: 15px;
 }
