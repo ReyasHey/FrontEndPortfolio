@@ -39,3 +39,35 @@
     min-height: 10vh;
     max-height: 100vh;
 }
+
+.footer-links {
+    padding: 0 16vw 0 16vw;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+.mail-link {
+    color: rgba(0,0,0,0);
+    background: linear-gradient(90deg,#d15151,#8c16bb 50%,#5759d4);
+    background-clip: text;
+    -webkit-text-fill-color: rgba(0,0,0,.0001);
+    -webkit-background-clip: text;
+    opacity: 1;
+
+    font-weight: 800;
+    font-size: 3rem;
+}
+
+.git-link {
+    color: rgba(0,0,0,0);
+    background: linear-gradient(90deg,#d17a51,#bb167c 50%,#5759d4);
+    background-clip: text;
+    -webkit-text-fill-color: rgba(0,0,0,.0001);
+    -webkit-background-clip: text;
+    opacity: 1;
+
+    font-weight: 800;
+    font-size: 3rem;
+}
