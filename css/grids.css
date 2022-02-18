@@ -120,16 +120,16 @@
 
     text-align: center;
 
-    background-color: #f1e572;
+    background-color: #e2d454;
     padding: 20px;
     border-radius: 42px;
 }
 
 .LemonsLink {
-    background-color: rgb(98, 216, 75);
+    background-color: rgb(0, 158, 0);
     padding: 7px;
     margin: 2px 0 2px 0;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 /* 2nd Grid */
