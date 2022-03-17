@@ -71,3 +71,30 @@
     font-weight: 800;
     font-size: 3rem;
 }
+
+#Contact {
+    background-color: #0b0b0b;
+    padding: 0 ;
+    margin: 0;
+    max-height: fit-content;
+    min-height: 100vh;
+    text-align: center;
+}
+
+#footerH {
+    font-size: normal;
+    line-height: normal;
+    padding: 42px 42px 4vw 42px;
+    margin: 0;
+}
+
+#footerP {
+    height: max-content;
+    font-size: 2.2rem;
+}
+
+@media (max-width: 1408px) {
+    #footerH {
+        padding: 0 4%;
+    }
+}

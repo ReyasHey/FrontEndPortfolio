@@ -41,7 +41,7 @@
     grid-template-columns: 10vw repeat(4, 1fr) 10vw;
     grid-auto-rows: auto;
     /* max-height: clamp(1080px, 100vh, 2000px); */
-    background-image: url("../imgs/bgs/bg.png");
+    background-image: url("../imgs/bgs/bg.webp");
     background-repeat: no-repeat;
     background-size: 100vw 100vh; /* ! TODO: Make this ~95vh so to start the next page within this viewport as to chain content together */
 
@@ -82,7 +82,7 @@
     height: 300vh;
     max-width: 100%;
 
-    background-image: url("../imgs/bgs/bgFade.png");
+    background-image: url("../imgs/bgs/bgFade.webp");
     background-repeat: no-repeat;
     background-size: 100vw 190vh;
 
