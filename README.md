@@ -1,2 +1,1 @@
-# Front-End-Portfolio
-WIP of my Front End Developer Portfolio
+WIP of my Front End Portfolio

@@ -31,6 +31,9 @@
     display: flex;
 }
 
+.sticky-link-wrapper > a {
+    margin: 8px 0;
+}
 
 /* Home/Site's First Section Grid */
 .home-grid-wrapper {
@@ -76,13 +79,16 @@
     grid-template-rows: 40vh 75vh 75vh;
     grid-template-columns: 1fr;
     max-height: 190vh;
+    height: 300vh;
+    max-width: 100%;
 
-    background-image: url("../imgs/bgs/bgProjects.png");
+    background-image: url("../imgs/bgs/bgFade.png");
     background-repeat: no-repeat;
     background-size: 100vw 190vh;
 
     /* Making the content closer together while keeping the bg full width*/
     padding: 0 10% 0 10%;
+
 }
 
 /* Header of the grid */

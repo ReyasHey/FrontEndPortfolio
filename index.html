@@ -24,10 +24,11 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/kute.js/2.2.2/kute.min.js" defer></script>
     <script src="./js/blob%20animation.js" defer></script>
+    <script src="./js/scroll%20resize.js" defer></script>
 
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
-<body>
+<body onload="scrollResize()">
     <!-- ! TODO: Add quick animated minimal loading screen for the staring ~0.2s to cover loading assetts -->
 
     <!-- Morphing blob 1 in the background -->
@@ -53,39 +54,63 @@
         <nav class="sticky-nav-links-wrapper">
             <div class="sticky-link-wrapper">
                 <a href="#Home">
-                    <svg version="1.1" id="visual" role='button' width=35 height=35 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 125.3 139.3" style="enable-background:new 0 0 125.3 139.3;" xml:space="preserve">
+                    <!-- Nav Blob -->
+                    <svg id="HomeSvg" version="1.1" role='button' width=35 height=35 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 125.3 139.3" style="enable-background:new 0 0 125.3 139.3;" xml:space="preserve">
                         <title>Home navigation button</title>
                         <desc>Scrolls to the Home section of the website</desc>
                         <g transform="translate(489.154691105288 277.97627775424405)">
-                            <path style="fill:#f74519;" d="M-371.5-250.5c10.3,16.4,10.2,37.6,5.8,58.3c-4.3,20.7-12.9,41-28.2,49.2c-15.3,8.2-37.5,4.2-55.9-5.4c-18.4-9.7-33.2-25-37.8-43.2c-4.5-18.2,1.1-39.2,13.6-56.1s31.7-29.7,51.6-30.3C-402.5-278.6-381.8-266.9-371.5-250.5"/>
+                            <path id="visualHome" style="fill:#f74519;" d="M-371.5-250.5c10.3,16.4,10.2,37.6,5.8,58.3c-4.3,20.7-12.9,41-28.2,49.2c-15.3,8.2-37.5,4.2-55.9-5.4c-18.4-9.7-33.2-25-37.8-43.2c-4.5-18.2,1.1-39.2,13.6-56.1s31.7-29.7,51.6-30.3C-402.5-278.6-381.8-266.9-371.5-250.5"/>
                         </g>
                     </svg>
+                    <!-- Nav Minimal -->
+                    <svg id="HomeSvgMinimal" role='button' width=35 height=35 version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 31.4 155.8" style="enable-background:new 0 0 31.4 155.8; display: none;" xml:space="preserve">
+                        <title>Home navigation button</title>
+                        <desc>Scrolls to the Home section of the website</desc>
+                        <rect x="2.5" y="2.5" style="fill:#231F20;stroke:#FFFFFF;stroke-width:5;stroke-miterlimit:10;" width="26.4" height="150.8"/>
+                    </svg>
+                    <!-- End Navigation Svg-s -->
                 </a>
-                <a href="#Home" class="bouncy-nav-link">&nbsp;Home</a>                      <!-- ! TODO: Push more to the left as to not have a gap between text and image + add +1 space at the start of space-->
+                <a id="HomeLink" href="#Home" class="bouncy-nav-link">&nbsp;Home</a>                      <!-- ! TODO: Push more to the left as to not have a gap between text and image + add +1 space at the start of space-->
             </div>
             <div class="sticky-link-wrapper">
                 <a href="#Projects">
-                    <svg version="1.1" id="visual" role='button' width=35 height=35 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 125.3 139.3" style="enable-background:new 0 0 125.3 139.3;" xml:space="preserve">
+                    <!-- Nav Blob -->
+                    <svg id="ProjectsSvg" version="1.1" role='button' width=35 height=35 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 125.3 139.3" style="enable-background:new 0 0 125.3 139.3;" xml:space="preserve">
                         <desc>Scrolls to the Projects section of the website</desc>         <!-- ! TODO: Change to final section name -->
                         <title>Projects navigation button</title>                           <!-- ! TODO: Change to final section name -->
                         <g transform="translate(489.154691105288 277.97627775424405)">
-                            <path style="fill:#f74519;" d="M-371.5-250.5c10.3,16.4,10.2,37.6,5.8,58.3c-4.3,20.7-12.9,41-28.2,49.2c-15.3,8.2-37.5,4.2-55.9-5.4c-18.4-9.7-33.2-25-37.8-43.2c-4.5-18.2,1.1-39.2,13.6-56.1s31.7-29.7,51.6-30.3C-402.5-278.6-381.8-266.9-371.5-250.5"/>
+                            <path id="visualProjects" style="fill:#f74519;" d="M-371.5-250.5c10.3,16.4,10.2,37.6,5.8,58.3c-4.3,20.7-12.9,41-28.2,49.2c-15.3,8.2-37.5,4.2-55.9-5.4c-18.4-9.7-33.2-25-37.8-43.2c-4.5-18.2,1.1-39.2,13.6-56.1s31.7-29.7,51.6-30.3C-402.5-278.6-381.8-266.9-371.5-250.5"/>
                         </g>
                     </svg>
+                    <!-- Nav Minimal -->
+                    <svg id="ProjectSvgMinimal" role='button' width=35 height=35 version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 31.4 155.8" style="enable-background:new 0 0 31.4 155.8; display: none;" xml:space="preserve">
+                        <title>Home navigation button</title>
+                        <desc>Scrolls to the Home section of the website</desc>
+                        <rect x="2.5" y="2.5" style="fill:#231F20;stroke:#FFFFFF;stroke-width:5;stroke-miterlimit:10;" width="26.4" height="150.8"/>
+                    </svg>
+                    <!-- End Navigation Svg-s -->
                 </a>
-                <a href="#Projects" class="bouncy-nav-link">&nbsp;Projects</a>
+                <a id="ProjectsLink" href="#Projects" class="bouncy-nav-link">&nbsp;Projects</a>
             </div>
             <div class="sticky-link-wrapper">
                 <a href="#Contact">
-                    <svg version="1.1" id="visual" role='button' width=35 height=35 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 125.3 139.3" style="enable-background:new 0 0 125.3 139.3;" xml:space="preserve">
+                    <!-- Nav Blob -->
+                    <svg id="ContactSvg" version="1.1" role='button' width=35 height=35 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 125.3 139.3" style="enable-background:new 0 0 125.3 139.3;" xml:space="preserve">
                         <title>Contacts navigation button</title>                           <!-- ! TODO:  Change to final section name -->
                         <desc>Scrolls to the Contacts section of the website</desc>         <!-- ! TODO:  Change to final section name -->
                         <g transform="translate(489.154691105288 277.97627775424405)">
-                            <path style="fill:#f74519;" d="M-371.5-250.5c10.3,16.4,10.2,37.6,5.8,58.3c-4.3,20.7-12.9,41-28.2,49.2c-15.3,8.2-37.5,4.2-55.9-5.4c-18.4-9.7-33.2-25-37.8-43.2c-4.5-18.2,1.1-39.2,13.6-56.1s31.7-29.7,51.6-30.3C-402.5-278.6-381.8-266.9-371.5-250.5"/>
+                            <path id="visualContact" style="fill:#f74519;" d="M-371.5-250.5c10.3,16.4,10.2,37.6,5.8,58.3c-4.3,20.7-12.9,41-28.2,49.2c-15.3,8.2-37.5,4.2-55.9-5.4c-18.4-9.7-33.2-25-37.8-43.2c-4.5-18.2,1.1-39.2,13.6-56.1s31.7-29.7,51.6-30.3C-402.5-278.6-381.8-266.9-371.5-250.5"/>
                         </g>
                     </svg>
+                    <!-- Nav Minimal -->
+                    <svg id="ContactSvgMinimal" role='button' width=35 height=35 version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 31.4 155.8" style="enable-background:new 0 0 31.4 155.8; display: none;" xml:space="preserve">
+                        <title>Home navigation button</title>
+                        <desc>Scrolls to the Home section of the website</desc>
+                        <rect x="2.5" y="2.5" style="fill:#FFFFFF;stroke:#231F20;stroke-width:5;stroke-miterlimit:10;" width="26.4" height="150.8"/>
+                    </svg>
+                    <!-- End Navigation Svg-s -->
                 </a>
-                <a href="#Contact" class="bouncy-nav-link">&nbsp;Contact</a>
+                <a id="ContactLink" href="#Contact" class="bouncy-nav-link">&nbsp;Contact</a>
             </div>
         </nav>
     </header>
@@ -93,7 +118,7 @@
     <main style="max-width: 100%;">
         <!-- Home/Landing Page -->
         <article id="Home" class="home-grid-wrapper">
-            <header class="home-h-grid">
+            <header class="home-h-grid" id="HeaderHome">
                 <h2>Reyas<br><br><br><br><br>Hey,</h2>
             </header>
             <p class="home-p-grid p-home-intro">i'm an italy based front-end web developer, with a strong interest in details and performance</p>
@@ -118,9 +143,9 @@
         <!-- ! Like its "scanning the page above" -->
 
         <!-- Projects -->
-        <section id="Projects" class="projects-grid-wrapper" style="background-image: url('./imgs/bgs/bgProjects.png'); height: 200vh; max-width: 100%;">
+        <section id="Projects" class="projects-grid-wrapper">
             <header>
-                <h2 class="Projects">Projects</h2>
+                <h2 class="Projects">Projects</h2> <!-- ! TODO: Add more space to the top -->
             </header>
             <!-- Lemons Home Page -->
             <article id="Lemons" class="Lemons">
@@ -156,7 +181,7 @@
             <article id="ComingSoon" class="ComingSoon">
                 <header class="SoonH">
                     <h3>Coming Soon</h3>
-                    <h3 class="h3-2" >New project coming this month, <br> <a class="h3-a" href="https://github.com/ReyasHey" target="_blank" >stay tuned ></a></h3>
+                    <h3 class="h3-2" >New project coming this month, <br> <a id="lastProjectLink" class="h3-a" href="https://github.com/ReyasHey" target="_blank" >stay tuned ></a></h3>
                 </header>
                 <div class="SoonP" style="display: none;">
                     <p>Desciption lorem ipsum <br> More Info ></p>
@@ -183,10 +208,11 @@
 
     <!-- ! TODO: Add dithering/dripping (waves morphing into each other) -->
 
-    <footer id="Contact" style="background-color: #0b0b0b; padding: 0 ; margin: 0; height: 50vw; text-align: center;">
-        <h2 style="font-size: normal; line-height: normal; padding: 42px 42px 6vw 42px; margin: 0;">Keep in Contact</h2>
-        <p style="font-size: 2.2rem;">Thank you for visiting my portfolio! <br>
-            For any inquiries, issues or more information</p>
+    <footer id="Contact" style="background-color: #0b0b0b; padding: 0 ; margin: 0; height: 100vh; text-align: center;">
+        <h2 style="font-size: normal; line-height: normal; padding: 42px 42px 6vw 42px; margin: 0;">Keep in Contact</h2> <!-- ! TODO: Add more space to the top -->
+        <p style="font-size: 2.2rem;">Thank you for visiting my portfolio!<br>
+            For any inquiries, issues or if you want to<br>
+            know more about my projects</p>
         <div class="footer-links">
             <a href="mailto:reyas.hey@gmail.com" class="mail-link">Send me an e-mail</a>
             <p style="font-weight: 800; font-size: 2rem;">or</p>
