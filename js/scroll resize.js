@@ -49,7 +49,6 @@ function scrollResize () {
         // START Listen for scrolling Projects
         var elementTarget2 = document.getElementById("lastProjectLink");
         if (window.scrollY > (elementTarget2.offsetTop + elementTarget2.offsetHeight)) {
-            console.log("Scrolled past Projects");
             if (!isMinimal){
                 HomeBall.style.display = "none";
                 ProjectsBall.style.display = "none";
@@ -62,7 +61,6 @@ function scrollResize () {
                 isMinimal = 1;
             } // Hide nav links if scrolled past
         }else {
-            console.log("Scrolled up from Projects");
             if (isMinimal){
                 HomeBall.style.display = "inline-block";
                 ProjectsBall.style.display = "inline-block";
