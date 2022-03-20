@@ -43,7 +43,9 @@
     /* max-height: clamp(1080px, 100vh, 2000px); */
     background-image: url("../imgs/bgs/bg.webp");
     background-repeat: no-repeat;
-    background-size: 100vw 100vh; /* ! TODO: Make this ~95vh so to start the next page within this viewport as to chain content together */
+    background-size: cover;
+    background-size: 100vw 100%; /* ! TODO: Make this ~95vh so to start the next page within this viewport as to chain content together */
+
 
     /* Making the content closer together while keeping the bg full width*/
     padding: 0 10% 0 10%;
@@ -77,14 +79,12 @@
 .projects-grid-wrapper {
     display: grid;
     grid-template-rows: 40vh 75vh 75vh;
-    grid-template-columns: 1fr;
-    max-height: 190vh;
-    height: 300vh;
-    max-width: 100%;
+    grid-template-columns: 100%;
+    width: 100vw;
 
     background-image: url("../imgs/bgs/bgFade.webp");
     background-repeat: no-repeat;
-    background-size: 100vw 190vh;
+    background-size: 100% 100%;
 
     /* Making the content closer together while keeping the bg full width*/
     padding: 0 10% 0 10%;
@@ -103,21 +103,30 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
+
+    max-width: 100%;
+}
+
+.LemonsText {                                   /* Flex: Lemons Text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    grid-column: 1;
+    grid-row: 1;
 }
 
 /* Lemons grid elements */
 .LemonsH {
-    grid-column: 1;
-    grid-row: 1;
     align-self: center;
-    margin-top: -15rem;
+    width: 30vw;
 }
 
 .LemonsP {
-    grid-column: 1;
-    grid-row: 1;
     align-self: center;
-    padding-top: 5rem;
+    line-height: 1;
+    width: 30vw;
 }
 
 .LemonsSite {
@@ -145,6 +154,8 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
+
+    max-width: 100%;
 }
 
 /* ComingSoon grid elements */
