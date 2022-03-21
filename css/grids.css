@@ -41,7 +41,7 @@
     grid-template-columns: 10vw repeat(4, 1fr) 10vw;
     grid-auto-rows: auto;
     /* max-height: clamp(1080px, 100vh, 2000px); */
-    background-image: url("../imgs/bgs/bg.webp");
+    background-image: url("../imgs/bgs/bg.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-size: 100% 100%; /* ! TODO: Make this ~95vh so to start the next page within this viewport as to chain content together */
@@ -85,7 +85,7 @@
     grid-template-columns: 100%;
     width: 100%;
 
-    background-image: url("../imgs/bgs/bgFade.webp");
+    background-image: url("../imgs/bgs/bgFade.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
 
@@ -147,19 +147,20 @@
     align-items: center;
 
     height: fit-content;
+    width: calc(40vw + 2%);
 
     text-align: center;
 
-    background-color: #e2d454;
+    background-color: #eee277;
     padding: 0.5vw;
     border-radius: 42px;
 }
 
 .LemonsLink {
-    background-color: rgb(0, 158, 0);
+    background-color: rgb(50, 161, 50);
     padding: 2%;
     margin: 2px 0 2px 0;
-    border-radius: 10px;
+    border-radius: 25px;
     width: max-content;
 }
 
@@ -210,6 +211,6 @@
     background-color: rgb(75, 75, 75);
     padding: 2%;
     margin: 2px 0 2px 0;
-    border-radius: 15px;
+    border-radius: 25px;
     width: max-content;
 }
