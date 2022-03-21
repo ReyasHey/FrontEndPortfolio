@@ -6,10 +6,13 @@
 
 #blobContainer {
     position: absolute;
-    top: 650px;
-    left: 300px;
+    top: 70vh;
+    left: 17vw;
 
     z-index: 0;
+
+    aspect-ratio: 1/1;
+    width: 22vw;
 }
 
 .p-home-intro {
@@ -83,7 +86,7 @@
 
 #footerH {
     font-size: normal;
-    line-height: normal;
+    line-height: 10rem;
     padding: 42px 42px 4vw 42px;
     margin: 0;
 }
