@@ -64,9 +64,19 @@ a {
     text-decoration: none;
 }
 
+main {
+    overflow: hidden;
+}
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 707px) {
     * {
         font-size: 0.5rem;
+    }
+    #stickyNav {
+        display: none;
+    }
+    #footerLinks {
+        flex-direction: column;
+        align-items: center;
     }
 }
