@@ -9,7 +9,7 @@
 
     <link rel="canonical" href="https://reyashey.github.io/Front-End-Portfolio/">
 
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Poppins:500,700&display=swap" onload="this.onload=null; this.rel='stylesheet'">        <!-- ! Select only the weight used -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap" onload="this.onload=null; this.rel='stylesheet'">        <!-- ! Select only the weight used -->
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:500,700&display=swap"></noscript>                                            <!-- ! TODO: Adjust grid for CLS caused by the delayed load time -->
 
     <link rel="preload" href="./css/globals.css" as="style" onload="this.onload=null; this.rel='stylesheet'">
@@ -119,9 +119,9 @@
         <!-- Home/Landing Page -->
         <article id="Home" class="home-grid-wrapper">
             <header class="home-h-grid" id="HeaderHome">
-                <h2>Reyas<br><br><br><br><br>Hey,</h2>
+                <h2>Reyas<br>Hey,</h2>
             </header>
-            <p class="home-p-grid p-home-intro">i'm an italy based front-end web developer, with a strong interest in details and performance</p>
+            <p class="home-p-grid p-home-intro">I'm an italy based front-end web developer, with a strong interest in details and performance</p>
             <!-- Avatar w/ inline css for quickest render and least Layout Shift -->
             <img
                 style="aspect-ratio: 49 / 93; width: 25vw; height: auto;"
@@ -134,33 +134,28 @@
             <!-- ? Render low res img behind this as a preview while this one loads -->
             <!-- ? Is this pixels or "w"? -->
             <!-- srcset="avatar-1000.jpg 1000w, avatar-2000.jpg 2000w, avatar-3000.jpg 3000w" -->
-            <!-- CLamp()? -->
+            <!-- Clamp()? -->
         </article>
 
         <!-- <hr style="height: 80px; background-color: #1b1b1b; border-width: 0; margin: 0px;"> -->
 
-        <!-- ! TODO: Make the foreground/transition scroll faster than the site in the background -->
-        <!-- ! Like its "scanning the page above" -->
-
         <!-- Projects -->
         <section id="Projects" class="projects-grid-wrapper">
             <header>
-                <h2 class="Projects">Projects</h2> <!-- ! TODO: Add more space to the top -->
+                <h2 class="Projects">Projects</h2>      <!-- ! TODO: Add more space to the top -->
             </header>
             <!-- Lemons Home Page -->
             <article id="Lemons" class="Lemons">
 
                 <div class="LemonsText">
                     <header class="LemonsH">
-                        <h3>Lemons Home Page</h3>
-                        <h3 class="h3-2">7-day Home Page challenge</h3>
+                        <h3 class="small-shadow">Lemons Home Page</h3>
+                        <h3 class="h3-2 small-shadow">7-day Home Page challenge</h3>
                     </header>
-                    <div class="LemonsP">
-                        <p>A project created as a 7-day challenge to design and code a mockup website landing page
-                           <br>
-                           It started as a rough concept and developed into a simple home page...
-                        </p>
-                    </div>
+                    <p class="LemonsP small-shadow">A project created as a 7-day challenge to design and code a mockup website landing page
+                        <br>
+                        It started as a rough concept and developed into a simple home page...
+                    </p>
                 </div>
 
                 <div class="LemonsConnector">
@@ -187,10 +182,10 @@
             <article id="ComingSoon" class="ComingSoon">
                 <div class="SoonText">
                     <header class="LemonsH">
-                        <h3>Daily Mood Board</h3>
-                        <h3 class="h3-2">A daily mood inspiration board</h3>
+                        <h3 class="small-shadow">Daily Mood Board</h3>
+                        <h3 class="h3-2 small-shadow">A daily mood inspiration board</h3>
                     </header>
-                    <div class="LemonsP">
+                    <div class="LemonsP small-shadow">
                         <p>WIP of an idea using Wordnik and COLOURLovers API.
                            <br>
                            This website is created to solve a very simple problem common in artists...
