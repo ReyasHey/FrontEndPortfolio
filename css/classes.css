@@ -62,7 +62,7 @@
     opacity: 1;
 
     font-weight: 800;
-    font-size: 3rem;
+    font-size: clamp(1.5rem, 2.5vw, 4rem);
 }
 
 .git-link {
@@ -74,7 +74,7 @@
     opacity: 1;
 
     font-weight: 800;
-    font-size: 3rem;
+    font-size: clamp(1.5rem, 2.5vw, 4rem);
 }
 
 #Contact {
@@ -91,7 +91,7 @@
 }
 
 #footerP {
-    font-size: clamp(2rem, 2.5vw, 2.25rem);
+    font-size: clamp(1.2rem, 2vw, 3.5rem);
 }
 
 @media screen and (max-width: 791px) {
