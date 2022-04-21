@@ -68,7 +68,11 @@ main {
     overflow: hidden;
 }
 
-/* Helper class shadow */
-.small-shadow {
-    text-shadow:0 0 5px rgba(20, 20, 20, 0.089);
+/* Helper classes shadows */
+.small-dark-shadow {
+    text-shadow:0 0 5px rgba(20, 20, 20, 0.2);
+}
+
+.small-light-shadow {
+    text-shadow:0 0 5px rgba(240, 240, 240, 0.2);
 }
