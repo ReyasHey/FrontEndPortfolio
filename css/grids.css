@@ -1,7 +1,8 @@
 /* Sticky Navigation/Header */
 .sticky-nav-grid-wrapper {
-    display: grid;
-    grid-template-rows: repeat(10, 1fr);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
 
     height: 100%;
     max-width: max-content;
@@ -14,17 +15,19 @@
 
 .sticky-nav-header {
     display: none; /* ! TODO: Make hidden outside of 'Home' section of site */
-    grid-row: 1;
+    align-self: flex-start;
     font-size: 25px;
 }
 
 .sticky-nav-links-wrapper {
-    grid-row: 5;
+    align-self: center;
+
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     margin-top: auto;
     margin-bottom: auto;
+    padding-bottom: 5vh;
 }
 
 .sticky-link-wrapper {
@@ -41,7 +44,7 @@
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: auto;
     /* max-height: clamp(1080px, 100vh, 2000px); */
-    background-image: url("../imgs/bgs/bg.png");
+    background-image: url("../imgs/bgs/bg.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-size: 100% 100%; /* ! TODO: Make this ~95vh so to start the next page within this viewport as to chain content together */
@@ -74,45 +77,35 @@
     align-self: end;
     /* ! TODO: Make this image responsive */
     /* ? IDEA: clamp could solve grid resizing issues? */
-    /*! max-height: clamp(1px, 0, 2px);  TODO: fix this, it's just not working as of now */
 }
 
 
 /* Home/Site's First Section Grid */
-.projects-grid-wrapper {
+.projects-wrapper {
     width: 100%;
 
-    background-image: url("../imgs/bgs/bgFade.png");
+    background-image: url("../imgs/bgs/bgFade.webp");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-
-    /* Making the content closer together while keeping the bg full width*/
-    padding: 0 10% 0 10%;
 
     z-index: -1;
 }
 
-.projects-grid-wrapper * {
+.projects-wrapper * {
     z-index: 1;
-}
-
-/* Header of the grid */
-.Projects {
-    grid-row: 1;
 }
 
 
 /* 1st Grid */
 .Lemons {
-    grid-row: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
 
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1;
+    width: 100%;
 
-    max-width: 100%;
-
-    padding: 6vw 0 6vw 0;
+    margin: 4% 0 5% 0;
 }
 
 .LemonsText {
@@ -124,33 +117,25 @@
     width: 30vw;
 
     height: fit-content;
-    align-self: center;
 }
 
 /* Lemons grid elements */
 .LemonsH {
-    align-self: center;
+    align-self: center;     /* ! TODO: remove this? */
 }
 
 .LemonsP {
-    align-self: center;
+    align-self: center;     /* ! TODO: remove this? */
 }
 
-.LemonsConnector {
-    grid-column: 2;
-    grid-row: 1/2;
-
-    align-self: center;
-    background-color: #ffdf3d;
-    height: 18vh;
+.LemonsImg {
+    aspect-ratio: 129 / 79;
+    object-fit: cover;
+    border-radius: 42px;
+    width: 40vw;
 }
 
 .LemonsSite {
-    grid-column: 3;
-    grid-row: 1/2;
-
-    align-self: center;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -163,6 +148,7 @@
     background-color: #ffdf3d;
     padding: 0.5vw;
     border-radius: 42px;
+    margin-top: 7%;
 }
 
 .LemonsLink {
@@ -175,22 +161,16 @@
 
 /* 2nd Grid */
 .ComingSoon {
-    grid-row: 3;
-
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 
     max-width: 100%;
-
-    padding: 6vw 2vw 10vw 2vw;
+    padding: 6vw 0 10vw 0;
 }
 
 /* ComingSoon grid elements */
 .SoonText {                                   /* Flex: Lemons Text */
-    grid-column: 3;
-    grid-row: 1;
-
     color: aliceblue;
     background-color: #141414;
     border-radius: 25px;
@@ -200,26 +180,22 @@
 
     height: fit-content;
     align-self: center;
+
+    margin-bottom: 25%;
 }
 
 .SoonH {
     align-self: center;
 }
 
-
-.SoonConnector {
-    grid-column: 2;
-    grid-row: 1;
-
-    align-self: center;
-    background-color: #141414;
-    height: 10vh;
+.MoodBoardImg {
+    aspect-ratio: 80 / 80;
+    object-fit: cover;
+    border-radius: 42px;
+    width: 30vw;
 }
 
 .SoonSite {
-    grid-column: 1;
-    grid-row: 1;
-
     align-self: center;
 
     display: flex;

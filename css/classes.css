@@ -19,7 +19,6 @@
     font-size: clamp(0.75rem, 1.55vw, 20rem);
 
     text-align: left;
-    min-width: 26vw;
     width: 26vw;
     margin: auto;
 }
@@ -95,14 +94,47 @@
 }
 
 @media screen and (max-width: 791px) {
+    #stickyNav {
+        display: none;
+    }
+
     #footerLinks {
         flex-direction: column;
         align-items: center;
     }
-}
 
-@media screen and (max-width: 707px) {
-    #stickyNav {
-        display: none;
+    .p-home-intro {
+        width: 100%;
+    }
+
+    .Lemons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .LemonsSite {
+        margin: 0;
+    }
+
+    .LemonsImg {
+        width: 70vw;
+    }
+
+    .LemonsText {
+        width: 60vw;
+        margin: 10% 0 5% 0;
+    }
+
+    .ComingSoon {
+        flex-direction: column-reverse;
+    }
+
+    .MoodBoardImg {
+        width: 60vw;
+    }
+
+    .SoonText {
+        width: 60vw;
+        margin: 10% 0 5% 0;
     }
 }

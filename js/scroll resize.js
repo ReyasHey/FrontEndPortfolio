@@ -22,6 +22,7 @@ function scrollResize () {
 
     window.addEventListener("scroll", function() {
         // START Listen for scrolling the Home
+        // Element to check if we passed scrolling
         var elementTarget = document.getElementById("HeaderHome");
         if (window.scrollY > (elementTarget.offsetTop + elementTarget.offsetHeight)) {
             if (HomeLink.style.display != 'none'){

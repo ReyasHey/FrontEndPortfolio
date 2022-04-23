@@ -22,14 +22,14 @@ h1 {
 }
 
 h2 {
-    font-size: clamp(5rem, 8vw, 40rem);
+    font-size: clamp(4.5rem, 8vw, 40rem);
     text-align: center;
     line-height: clamp(5rem, 7.9vw, 40rem);
     padding: 3.3vw 0 3.3vw 0;
 }
 
 h3 {
-    font-size: clamp(2.5rem, 3vw, 30rem);
+    font-size: clamp(2rem, 3vw, 30rem);
     text-align: center;
     line-height: 1;
     margin: auto;
@@ -39,7 +39,7 @@ h3 {
 .h3-2 {
     text-align: center;
 
-    font-size: clamp(2.2rem, 2vw, 28rem);
+    font-size: clamp(1.5rem, 2vw, 28rem);
     font-weight: 500;
     line-height: 1;
 
@@ -50,7 +50,7 @@ h3 {
 p {
     text-align: center;
 
-    font-size: clamp(0.75rem, 1.3vw, 20rem);
+    font-size: clamp(0.8rem, 1.3vw, 20rem);
     font-weight: 400;
 }
 

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width = device-width, initial-scale = 1.0">                              <!-- ! TODO: Optimize page for mobile and other resolutions -->
-    <title>Reyas | Front End Portfolio</title>
+    <title>Reyas | Portfolio</title>
     <meta name="description" content="Hey, I'm Reyas, an aspiring Front End Developer and this is my portfolio.">
 
     <link rel="canonical" href="https://reyashey.github.io/Front-End-Portfolio/">
@@ -124,11 +124,11 @@
             <p class="home-p-grid p-home-intro">I'm an italy based front-end web developer, with a strong interest in details and performance</p>
             <!-- Avatar w/ inline css for quickest render and least Layout Shift -->
             <img
-                style="aspect-ratio: 49 / 93; width: 25vw; height: auto;"
+                style="aspect-ratio: 90 / 171; width: 25vw; height: auto;"
 
                 class="home-avatar-grid"
 
-                src="./imgs/miscellaneous%20imgs/Reyas-avatar.png"
+                src="./imgs/misc/Reyas-avatar.webp"
                 alt="Reyas' avatar"
             />
             <!-- ? Render low res img behind this as a preview while this one loads -->
@@ -140,9 +140,9 @@
         <!-- <hr style="height: 80px; background-color: #1b1b1b; border-width: 0; margin: 0px;"> -->
 
         <!-- Projects -->
-        <section id="Projects" class="projects-grid-wrapper">
+        <section id="Projects" class="projects-wrapper">
             <header>
-                <h2 class="Projects">Projects</h2>      <!-- ! TODO: Add more space to the top -->
+                <h2>Projects</h2>      <!-- ! TODO: Add more space to the top -->
             </header>
             <!-- Lemons Home Page -->
             <article id="Lemons" class="Lemons">
@@ -158,17 +158,11 @@
                     </p>
                 </div>
 
-                <div class="LemonsConnector">
-                </div>
-
-                <div id="LemonsCard" class="LemonsSite">
+                <div id="LemonsSite" class="LemonsSite">
                     <a href="https://reyashey.github.io/Lemons-Landing-Page/" target="_blank">
                         <img
-                            style="aspect-ratio: 129 / 79;
-                                object-fit: cover;
-                                border-radius: 42px;
-                                width: 40vw;"
-                            src="./imgs/miscellaneous%20imgs/Lemons%20Home%20Page.webp"
+                            class="LemonsImg"
+                            src="./imgs/misc/Lemons-Home-Page.webp"
                             alt="Lemons Home Page"
                         />
                     </a>
@@ -180,6 +174,20 @@
                 </div>
             </article>
             <article id="ComingSoon" class="ComingSoon">
+                <div class="SoonSite">
+                    <a href="https://reyashey.github.io/Daily-Mood-Board/" target="_blank">
+                        <img class="MoodBoardImg"
+                            src="./imgs/misc/DailyMood.webp"
+                            alt="Daily Mood Board"
+                        />
+                    </a>
+                    <div style="display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; align-content: center; width: 100%; justify-content: space-evenly;">
+                        <a href="https://reyashey.github.io/Daily-Mood-Board/" target="_blank" class="SoonLink">Website Deployment ></a>
+                        <br>
+                        <a href="https://github.com/ReyasHey/Daily-Mood-Board" target="_blank" class="SoonLink" id="lastProjectLink">Github Project ></a>
+                    </div>
+                </div>
+
                 <div class="SoonText">
                     <header class="LemonsH">
                         <h3 class="small-light-shadow">Daily Mood Board</h3>
@@ -190,27 +198,6 @@
                            <br>
                            This website is created to solve a very simple problem common in artists...
                         </p>
-                    </div>
-                </div>
-
-                <div class="SoonConnector">
-                </div>
-
-                <div class="SoonSite">
-                    <a href="https://reyashey.github.io/Daily-Mood-Board/" target="_blank">
-                        <img
-                            style="aspect-ratio: 80 / 80;
-                                object-fit: cover;
-                                border-radius: 42px;
-                                width: 30vw;"
-                            src="./imgs/miscellaneous imgs/DailyMood.png"
-                            alt="Daily Mood Board"
-                        />
-                    </a>
-                    <div style="display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; align-content: center; width: 100%; justify-content: space-evenly;">
-                        <a href="https://reyashey.github.io/Daily-Mood-Board/" target="_blank" class="SoonLink">Website Deployment ></a>
-                        <br>
-                        <a href="https://github.com/ReyasHey/Daily-Mood-Board" target="_blank" class="SoonLink" id="lastProjectLink">Github Project ></a>
                     </div>
                 </div>
             </article>
