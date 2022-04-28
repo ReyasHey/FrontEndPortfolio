@@ -12,7 +12,6 @@
     z-index: 0;
 
     aspect-ratio: 1/1;
-    width: 22vw;
     width: clamp(20rem, 22vw, 10000px);
 }
 
@@ -94,6 +93,10 @@
 }
 
 @media screen and (max-width: 791px) {
+    #blobSvgContainer {
+        margin: -10%;
+    }
+
     .sticky-nav-grid-wrapper {
         height: max-content;
         width: 100%;
