@@ -13,7 +13,7 @@
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:500,700&display=swap"></noscript>                                            <!-- ! TODO: Adjust grid for CLS caused by the delayed load time -->
 
     <link rel="preload" href="./css/globals.css" as="style" onload="this.onload=null; this.rel='stylesheet'">
-    <link rel="preload" href="./css/grids.css" as="style" onload="this.onload=null; this.rel='stylesheet'">
+    <link rel="preload" href="./css/wrappers.css" as="style" onload="this.onload=null; this.rel='stylesheet'">
     <link rel="preload" href="./css/classes.css" as="style" onload="this.onload=null; this.rel='stylesheet'">
     <link rel="preload" href="./css/animations.css" as="style" onload="this.onload=null; this.rel='stylesheet'">
 
@@ -34,7 +34,7 @@
     <!-- Morphing blob 1 in the background -->
     <!-- ! TODO: Put all the svgs in an external file -->
     <!-- ! TODO: Decide if this goes inside a grid/flexbox with z-index: -1 -->
-    <svg id="blobContainer" onload="animateBlob()" role="img" viewBox="0 0 960 540" width="300" height="300" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+    <svg id="blobSvgContainer" onload="animateBlob()" role="img" viewBox="0 0 960 540" width="300" height="300" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
         <!-- First blob -->
         <g transform="translate(489.154691105288 277.97627775424405)">
             <path id="blob1" d="M165.3 -143.1C198.2 -90.6 197.8 -22.7 184 43.6C170.1 109.9 142.8 174.8 93.6 200.9C44.5 227 -26.3 214.4 -85.4 183.6C-144.4 152.7 -191.6 103.6 -206.2 45.5C-220.7 -12.7 -202.6 -79.9 -162.8 -134C-123 -188.1 -61.5 -229 2.3 -230.9C66.2 -232.8 132.4 -195.6 165.3 -143.1" fill="#f74519"></path>
@@ -53,7 +53,7 @@
         <h1 class="sticky-nav-header">ReyasHey</h1>
         <nav class="sticky-nav-links-wrapper">
             <div class="sticky-link-wrapper">
-                <a href="#Home">
+                <a href="#Home" id="navBlob">
                     <!-- Nav Blob -->
                     <svg id="HomeSvg" version="1.1" role='button' width=35 height=35 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 125.3 139.3" style="enable-background:new 0 0 125.3 139.3;" xml:space="preserve">
                         <title>Home navigation button</title>
@@ -73,7 +73,7 @@
                 <a id="HomeLink" href="#Home" class="bouncy-nav-link">&nbsp;Home</a>                      <!-- ! TODO: Push more to the left as to not have a gap between text and image + add +1 space at the start of space-->
             </div>
             <div class="sticky-link-wrapper">
-                <a href="#Projects">
+                <a href="#Projects" id="navBlob">
                     <!-- Nav Blob -->
                     <svg id="ProjectsSvg" version="1.1" role='button' width=35 height=35 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 125.3 139.3" style="enable-background:new 0 0 125.3 139.3;" xml:space="preserve">
                         <desc>Scrolls to the Projects section of the website</desc>         <!-- ! TODO: Change to final section name -->
@@ -93,7 +93,7 @@
                 <a id="ProjectsLink" href="#Projects" class="bouncy-nav-link">&nbsp;Projects</a>
             </div>
             <div class="sticky-link-wrapper">
-                <a href="#Contact">
+                <a href="#Contact" id="navBlob">
                     <!-- Nav Blob -->
                     <svg id="ContactSvg" version="1.1" role='button' width=35 height=35 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 125.3 139.3" style="enable-background:new 0 0 125.3 139.3;" xml:space="preserve">
                         <title>Contacts navigation button</title>                           <!-- ! TODO:  Change to final section name -->
@@ -117,27 +117,26 @@
 
     <main style="width: 100wv; height: 100%;">
         <!-- Home/Landing Page -->
-        <article id="Home" class="home-grid-wrapper">
-            <header class="home-h-grid" id="HeaderHome">
-                <h2>Reyas<br>Hey,</h2>
-            </header>
-            <p class="home-p-grid p-home-intro">I'm an italy based front-end web developer, with a strong interest in details and performance</p>
+        <article id="Home" class="home-wrapper">
+            <div class="home-text-wrapper">
+                <header id="HeaderHome">
+                    <h2>Reyas<br>Hey,</h2>
+                </header>
+                <p class="p-home-intro">I'm an italy based front-end web developer, with a strong interest in details and performance</p>
+            </div>
             <!-- Avatar w/ inline css for quickest render and least Layout Shift -->
-            <img
-                style="aspect-ratio: 90 / 171; width: 25vw; height: auto;"
-
-                class="home-avatar-grid"
-
-                src="./imgs/misc/Reyas-avatar.webp"
-                alt="Reyas' avatar"
-            />
-            <!-- ? Render low res img behind this as a preview while this one loads -->
-            <!-- ? Is this pixels or "w"? -->
-            <!-- srcset="avatar-1000.jpg 1000w, avatar-2000.jpg 2000w, avatar-3000.jpg 3000w" -->
-            <!-- Clamp()? -->
+            <div class="home-avatar-wrapper">
+                <img class="home-avatar"
+                    src="./imgs/misc/Reyas-avatar.webp"
+                    alt="Reyas' avatar"
+                />
+                <!-- ? Render low res img behind this as a preview while this one loads -->
+                <!-- ? Is this pixels or "w"? -->
+                <!-- srcset="avatar-1000.jpg 1000w, avatar-2000.jpg 2000w, avatar-3000.jpg 3000w" -->
+                <!-- Clamp()? -->
+            </div>
         </article>
 
-        <!-- <hr style="height: 80px; background-color: #1b1b1b; border-width: 0; margin: 0px;"> -->
 
         <!-- Projects -->
         <section id="Projects" class="projects-wrapper">
@@ -204,13 +203,13 @@
         </section>
     </main>
 
-    <hr style="height: 8    0px; background-color: #1b1b1b; border-width: 0; margin: 0px;">
+
     <!-- ! TODO: Make the foreground/transition scroll faster than the site in the background -->
     <!-- ! Like its "scanning the page above" -->
 
     <!-- ! TODO: Add dithering/dripping (waves morphing into each other) -->
 
-    <footer id="Contact" style="display: flex; flex-direction: column; justify-content: center; padding-top: 10%; padding-bottom: 20%; max-height: 100vh;">
+    <footer id="Contact" style="display: flex; flex-direction: column; justify-content: center; padding: 10% 3% 20% 3%; max-height: 100vh;">
         <h2 id="footerH">Keep in Contact</h2> <!-- ! TODO: Add more space to the top -->
         <p id="footerP">Thank you for visiting my portfolio!</p>
         <div id="footerLinks" class="footer-links">

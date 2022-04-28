@@ -20,22 +20,31 @@ function scrollResize () {
     var InProjectsBall = document.getElementById("visualProjects");
     var InContactBall = document.getElementById("visualContact");
 
+    //Bg of the entire div
+    var bgDiv = document.getElementById("stickyNav");
+    var bgDivBGColor = window.getComputedStyle( document.getElementById("stickyNav")).getPropertyValue('background-color');
+    var isMobile = 0;
+
+    if (bgDivBGColor.localeCompare("rgb(240, 217, 215)") == 0)
+        isMobile = 1;
+
     window.addEventListener("scroll", function() {
         // START Listen for scrolling the Home
-        // Element to check if we passed scrolling
-        var elementTarget = document.getElementById("HeaderHome");
+        var elementTarget = document.getElementById("HeaderHome");  // Element to check if we passed scrolling
         if (window.scrollY > (elementTarget.offsetTop + elementTarget.offsetHeight)) {
-            if (HomeLink.style.display != 'none'){
-                HomeLink.style.display = "none";
-                ProjectsLink.style.display = "none";
-                ContactLink.style.display = "none";
+            if (HomeLink.style.display != 'none'){      // Projects
+                if (!isMobile){     // If its not mobile
+                    HomeLink.style.display = "none";
+                    ProjectsLink.style.display = "none";
+                    ContactLink.style.display = "none";
+                }
 
                 InHome.style.opacity = "0.5";
                 InProjectsBall.style.opacity = "1";
                 InContactBall.style.opacity = "0.5";
             } // Hide nav links if scrolled past
-        } else {
-            if (HomeLink.style.display != 'inline-block'){
+        } else {                                        // Home
+            if (InProjectsBall.style.opacity == "1"){
                 HomeLink.style.display = "inline-block";
                 ProjectsLink.style.display = "inline-block";
                 ContactLink.style.display = "inline-block";
@@ -48,9 +57,17 @@ function scrollResize () {
         // END Listen for scrolling home
 
         // START Listen for scrolling Projects
-        var elementTarget2 = document.getElementById("lastProjectLink");
+        var elementTarget2 = document.getElementById("lastProjectLink");  // Element to check if we passed scrolling
         if (window.scrollY > (elementTarget2.offsetTop + elementTarget2.offsetHeight)) {
-            if (!isMinimal){
+            if (!isMinimal){                            // Footer
+                if (isMobile){    // If its mobile
+                    bgDiv.style.backgroundColor = "#0b0b0b";
+
+                    HomeLink.style.display = "none";
+                    ProjectsLink.style.display = "none";
+                    ContactLink.style.display = "none";
+                }
+
                 HomeBall.style.display = "none";
                 ProjectsBall.style.display = "none";
                 ContactBall.style.display = "none";
@@ -62,7 +79,15 @@ function scrollResize () {
                 isMinimal = 1;
             } // Hide nav links if scrolled past
         }else {
-            if (isMinimal){
+            if (isMinimal){                             // Projects
+                if (isMobile){    // If its mobile
+                    bgDiv.style.backgroundColor = "#f0d9d7";
+
+                    HomeLink.style.display = "inline-block";
+                    ProjectsLink.style.display = "inline-block";
+                    ContactLink.style.display = "inline-block";
+                }
+
                 HomeBall.style.display = "inline-block";
                 ProjectsBall.style.display = "inline-block";
                 ContactBall.style.display = "inline-block";

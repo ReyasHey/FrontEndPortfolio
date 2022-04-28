@@ -3,7 +3,7 @@
     100% { transform: rotate(360deg); }
 }
 
-#blobContainer {
+#blobSvgContainer {
     animation-name: blobHover, blobRotate;
     animation-duration: 7.3s;
     animation-iteration-count: infinite;
