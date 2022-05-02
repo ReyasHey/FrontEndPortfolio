@@ -26,6 +26,23 @@
     <script src="./js/blob%20animation.js" defer></script>
     <script src="./js/scroll%20resize.js" defer></script>
 
+    <script src="./js/analytics.js" defer></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-57MMBC4C6L"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-57MMBC4C6L');
+
+        gtag('consent', 'default', {
+            'ad_storage': 'granted',
+            'analytics_storage': 'granted'
+        });
+    </script> -->
+
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body onload="scrollResize()">
@@ -203,6 +220,30 @@
         </section>
     </main>
 
+    <aside id="cookies-Popup" class="cookiesPopup">
+        <div id="cookiesForm">
+            <p>We use cookies to improve user experience and analyze website traffic.</p>
+            <p>By clicking "Accept", you agree to our website's cookie use as described in our Cookie Policy.</p>
+            <p>We're working on a preferences section where you'll be able to change your preference in the soon future.</p>
+
+            <div style="display: flex; flex-direction: row; width: 100%; margin: auto; justify-content: flex-end;">
+                <button class="cookies-button" onclick="acceptCookies(), hidePopup()">Accept</button>
+                <button class="cookies-button" onclick="denyCookies(), hidePopup()" style="opacity: 0.5; color: #04060a; background-color: transparent;">Decline</button>
+                <button class="cookies-button" onclick="changeScene(1)" style="opacity: 0.5; color: #04060a; background-color: transparent; text-decoration: underline;">Cookie Policy</button>
+            </div>
+        </div>
+        <div id="cookiePolicy" style="display: none;">
+            <h2 style="font-size: clamp(1.2rem, 1vw, 10rem); line-height: normal; padding: 0 0 1% 0;">Cookie Policy</h2>
+            <p>We use cookies to make sure that every user can get the best possible experience.</p>
+            <p>By continuing to use our services you agree to continue using our cookies.</p>
+
+            <div style="display: flex; flex-direction: row; width: 100%; margin: auto; justify-content: flex-end;">
+                <button class="cookies-button" onclick="acceptCookies(), hidePopup()">Accept</button>
+                <button class="cookies-button" onclick="denyCookies(), hidePopup()" style="opacity: 0.5; color: #04060a; background-color: transparent;">Decline</button>
+                <button class="cookies-button" onclick="changeScene(0)" style="opacity: 0.5; color: #04060a; background-color: transparent; text-decoration: underline;">&#60;&#60; Go Back</button>
+            </div>
+        </div>
+    </aside>
 
     <!-- ! TODO: Make the foreground/transition scroll faster than the site in the background -->
     <!-- ! Like its "scanning the page above" -->
