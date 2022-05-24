@@ -65,7 +65,7 @@
 
 .git-link {
     color: rgba(0,0,0,0);
-    background: linear-gradient(90deg,#5759d4,#16a2bb 50%,#57d481);
+    background: linear-gradient(90deg,#5759d4,#16a2bb);
     background-clip: text;
     -webkit-text-fill-color: rgba(0,0,0,.0001);
     -webkit-background-clip: text;
