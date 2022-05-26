@@ -51,6 +51,11 @@
     align-items: baseline;
 }
 
+.footerLinksSeparator {
+    font-weight: 800;
+    font-size: clamp(1rem, 1.8vw, 2.8rem);
+}
+
 .mail-link {
     color: rgba(0,0,0,0);
     background: linear-gradient(90deg,#d15151,#8c16bb 50%,#5759d4);
@@ -63,7 +68,13 @@
     font-size: clamp(1.5rem, 2.5vw, 4rem);
 }
 
-.git-link {
+.socialLinks {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.socialLinksText {
     color: rgba(0,0,0,0);
     background: linear-gradient(90deg,#5759d4,#16a2bb);
     background-clip: text;
@@ -75,11 +86,24 @@
     font-size: clamp(1.5rem, 2.5vw, 4rem);
 }
 
+.TwitterLink {
+    padding: 0 4.2vh;
+    height: 45px;
+}
+
+.GitLink {
+    height: 45px;
+}
+
 #Contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     background-color: #0b0b0b;
-    padding: 0 ;
+    padding: 10% 3% 20% 3%;
     margin: 0;
-    max-height: fit-content;
+    max-height: 100vh;
     min-height: 100vh;
     text-align: center;
 }
@@ -150,10 +174,6 @@
         align-items: center;
     }
 
-    .LemonsSite {
-        margin: 0;
-    }
-
     .LemonsImg {
         width: 70vw;
     }
@@ -163,7 +183,7 @@
         margin: 10% 0 5% 0;
     }
 
-    .ComingSoon {
+    .MoodBoard {
         flex-direction: column-reverse;
     }
 
@@ -171,7 +191,7 @@
         width: 60vw;
     }
 
-    .SoonText {
+    .MoodBoardText {
         width: 60vw;
         margin: 10% 0 5% 0;
     }
@@ -215,9 +235,36 @@
     z-index: 5;
 }
 
-.cookies-button {
+.cookiesH2 {
+    font-size: clamp(1.2rem, 1vw, 10rem);
+    line-height: normal;
+    padding: 0 0 1% 0;
+}
+
+.cookiesBtnContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: auto;
+    justify-content: flex-end;
+}
+
+.cookiesBtn {
     width: max-content;
     margin: 5% 2% 0 2%;
+}
+
+.cookiesDeclineBtn {
+    opacity: 0.5;
+    color: #04060a;
+    background-color: transparent;
+}
+
+.cookiesPolicyBtn {
+    opacity: 0.5;
+    color: #04060a;
+    background-color: transparent;
+    text-decoration: underline;
 }
 
 @media screen and (max-width: 800px) {
@@ -246,7 +293,7 @@
         border-radius: 0;
     }
 
-    .cookies-button {
+    .cookiesBtn {
         padding: 5%;
     }
 }

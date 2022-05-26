@@ -180,8 +180,19 @@
     width: max-content;
 }
 
-/* 2nd Grid */
-.ComingSoon {
+.LemonsButtons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+
+    width: 100%;
+}
+
+/* 2nd Flex */
+.MoodBoard {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -190,8 +201,8 @@
     padding: 6vw 0 10vw 0;
 }
 
-/* ComingSoon grid elements */
-.SoonText {                                   /* Flex: Lemons Text */
+/* Daily Mood Board Flex elements */
+.MoodBoardText {                                   /* Flex: Lemons Text */
     color: aliceblue;
     background-color: #141414;
     border-radius: 25px;
@@ -205,10 +216,6 @@
     margin-bottom: 25%;
 }
 
-.SoonH {
-    align-self: center;
-}
-
 .MoodBoardImg {
     aspect-ratio: 80 / 80;
     object-fit: cover;
@@ -216,7 +223,7 @@
     width: 30vw;
 }
 
-.SoonSite {
+.MoodBoardSite {
     align-self: center;
 
     display: flex;
@@ -233,7 +240,17 @@
     border-radius: 42px;
 }
 
-.SoonLink {
+.MoodBoardButtons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.MoodBoardLink {
     background-color: rgb(64, 64, 64);
     padding: 2%;
     margin: 2px 0 2px 0;
