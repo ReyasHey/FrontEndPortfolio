@@ -80,6 +80,8 @@ button:hover {
 
 main {
     overflow: hidden;
+    width: 100wv;
+    height: 100%;
 }
 
 /* Helper classes shadows */
