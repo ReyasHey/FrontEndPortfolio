@@ -19,7 +19,7 @@
     font-size: clamp(1rem, 1.55vw, 20rem);
 
     text-align: left;
-    width: 26vw;
+    width: 28vw;
 }
 
 /* .sticky-link-wrapper:hover > #navLink1 ~ #navLink2 ~ #navLink3 {
